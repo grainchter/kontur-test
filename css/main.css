@@ -1171,14 +1171,15 @@ main {
     border-right: 3px solid rgba(255, 255, 255, 0.1);
   }
 
-  .main-block4 .content .side1 h1 {
+  .main-block4 .content h1 {
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 120%;
+    font-size: 24px !important;
+    line-height: 135%;
 
     color: #ffffff;
+    text-align: center;
   }
 
   .main-block4 .content .side1 form {
@@ -1921,8 +1922,6 @@ main {
     resize: none;
   }
 
-
-
   .main-block4 .content .side2 {
     padding-left: 0;
   }
@@ -2048,4 +2047,220 @@ main {
     height: 447px;
     grid-area: side2;
   }
+}
+
+@media only screen and (max-width: 380px) {
+  .main-banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    padding: 0;
+  }
+
+  .main-banner .content {
+    padding-left: 15px;
+  }
+
+  .main-banner .main-text-block {
+    margin-top: 72px;
+  }
+
+  .main-banner .main-text-block h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+
+    color: #ffffff;
+  }
+
+  .main-banner .main-text-block .line {
+    width: 292px;
+  }
+
+  .main-banner .main-text-block p {
+    width: 288px;
+    max-width: 100%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+
+    color: #ffffff;
+  }
+
+  .main-banner .main-info-block {
+    width: max-content;
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .main-banner .main-info-block .block {
+    width: 100%;
+  }
+
+  .main-banner .main-info-block .block .container {
+    width: 100%;
+  }
+
+  .main-block1 .items {
+    margin-top: 48px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 290px);
+    grid-template-areas:
+      "item1 "
+      "item2 "
+      "item3 "
+      "item4"
+      "item5";
+    gap: 16px;
+  }
+
+  .main-block1 .items .item p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 145%;
+
+    color: #ffffff;
+  }
+
+  .main-block1 .items .item svg:first-child {
+    width: 100px;
+    height: 99px;
+  }
+
+  .main-block1 .items .item svg:last-child {
+    width: 80px;
+    height: 80px;
+  }
+
+  .main-block1 .items .item4 svg:last-child {
+    width: 16px;
+    height: 18px;
+  }
+
+  .main-block2 .content h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 135%;
+
+    text-align: center;
+
+    color: #313b59;
+  }
+
+  .main-block3 h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 135%;
+
+    color: #313b59;
+  }
+
+  .main-block4 .content {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 64px;
+  }
+
+  .main-block4 .content .side1 form .textBlocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name-input"
+      "phone-input"
+      "email-input"
+      "message-input";
+  }
+
+  .main-block4 .content .side1 form .textBlocks .message-input {
+    display: block;
+  }
+
+  .main-block4 .content .side1 form .actions {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+    margin-top: 30px;
+    grid-template-areas:
+      "checkbox"
+      "button";
+  }
+
+  .main-block4 .content .side1 form .actions .textarea textarea {
+    display: none;
+  }
+
+  .main-block4 .content .side2 .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 37px;
+  }
+
+  .main-block5 h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px !important;
+    line-height: 135%;
+
+    color: #313b59;
+  }
+
+  .main-block5 .content .side1 .items {
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    column-gap: 0;
+  }
+
+  .main-block5 .content .side1 .items .title p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+
+    color: #313b59;
+  }
+
+  .main-block5 .content .side1 .items .description {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #2d3343;
+  }
+
+  .main-block5 .content .side1 .items .description-block .element p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #2d3343;
+}
 }

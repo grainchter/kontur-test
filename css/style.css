@@ -707,7 +707,7 @@ details > div {
     height: 100%;
     display: grid;
     grid-template-columns: 64px 1fr;
-    column-gap: 54px;
+    column-gap: 35px;
     padding: 0 40px 0 42px;
   }
 
@@ -974,4 +974,119 @@ details > div {
     transform-origin: 10px 24px;
     fill: #f47a0b;
   }
+}
+
+@media only screen and (max-width: 380px) {
+  header {
+    width: 100%;
+    max-width: 100vw;
+    height: 72px;
+    background-color: #f4f7fb;
+    display: grid;
+    place-items: center;
+
+    transition: height 0.7s ease-out;
+
+    z-index: 10;
+    position: relative;
+  }
+
+  .header-wrap {
+    /* grid-template-columns: 1fr; */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "burger logo menu";
+    column-gap: 15px;
+  }
+
+  .header-logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    grid-area: logo;
+  }
+
+  .header-burger {
+    display: block;
+    width: 40px;
+    height: 25px;
+    grid-area: burger;
+  }
+
+  .header-menu {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: end;
+    align-items: center;
+    row-gap: 28px;
+    grid-area: menu;
+  }
+
+  .header-menu .line1 {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    place-items: center;
+  }
+
+  .header-menu .line1 ul {
+    display: none;
+  }
+
+  .header-menu .line2 {
+    display: none;
+  }
+
+  .header-menu .line1 .side2 .phone a {
+    display: none;
+  }
+
+  .header-menu .line2-active {
+    background-color: #F4F7FB;
+    display: grid;
+    position: absolute;
+    max-width: 100vw;
+    width: 100%;
+    top: 70px;
+    height: 100vh;
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  .header-menu .line2-active .header-logo {
+    display: none;
+  }
+
+  .header-menu .line2-active ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .header-menu .line2-active ul li {
+    width: 100%;
+  }
+
+  .header-menu .line2-active ul li .title {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    place-items: center;
+  
+    cursor: pointer;
+  }
+  
+  .header-menu .line2-active ul li .title a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 145%;
+  
+    color: #313b59;
+  }
+  
+
 }
