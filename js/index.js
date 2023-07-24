@@ -7,10 +7,14 @@ $(document).ready(function () {
 });
 
 $(window).on("scroll", function () {
-  $("header").toggleClass("scroll", $(this).scrollTop() > 70);
-  $(".header-burger").removeClass("active", $(this).scrollTop() < 70);
-  $(".line2").removeClass("line2-active", $(this).scrollTop() < 70);
-  $(`div[name="dropdown"`).toggleClass("dropdown", $(this).scrollTop() < 70);
+  if ($(window).width() >= '380') {
+
+    $("header").toggleClass("scroll", $(this).scrollTop() > 70);
+    $(".header-burger").removeClass("active", $(this).scrollTop() < 70);
+    $(".line2").removeClass("line2-active", $(this).scrollTop() < 70);
+    $(`div[name="dropdown"`).toggleClass("dropdown", $(this).scrollTop() < 70);
+  }
+
 });
 
 const openBurgerMenu = () => {
