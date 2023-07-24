@@ -7,6 +7,7 @@ header {
 
   transition: height 0.7s ease-out;
 
+
   z-index: 10;
 }
 
@@ -133,6 +134,7 @@ header {
 
 .header-menu .line2 {
   height: 100%;
+  overflow: hidden;
 }
 
 .header-menu .line2 .header-logo {
@@ -992,7 +994,6 @@ details > div {
   }
 
   .header-wrap {
-    /* grid-template-columns: 1fr; */
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "burger logo menu";
